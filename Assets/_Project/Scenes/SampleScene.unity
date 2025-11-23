@@ -1136,7 +1136,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84ce2f114ad12bd4ebafc77060220324, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1177,7 +1177,7 @@ Animator:
   m_GameObject: {fileID: 627092178}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52ec8165d30e4e947a31f01436cc4c90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1209,6 +1209,7 @@ MonoBehaviour:
   groundCheck: {fileID: 671527417}
   ceilingCheck: {fileID: 1203165393}
   DashDirectionIndicator: {fileID: 62117558}
+  anim: {fileID: 0}
   grounded: 0
   underCeiling: 0
   FacingDirection: 1

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,7 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform ceilingCheck;
-    [SerializeField] private Transform DashDirectionIndicator; 
+    [SerializeField] private Transform DashDirectionIndicator;
+    [SerializeField] private Animator anim;
 
     [Header("State")]
     public bool grounded;
@@ -49,6 +51,8 @@ public class PlayerController : MonoBehaviour
     {
         grounded = CheckIfGrounded();
         underCeiling = CheckForCeiling();
+
+        anim.SetFloat("Walking", Mathf.Abs(currentMoveInputX));
 
         if (grounded && !isDashing && !isHoldingDash) { dashesLeft = maxDashes; }
 
@@ -88,6 +92,7 @@ public class PlayerController : MonoBehaviour
         underCeiling = CheckForCeiling();
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+        anim = GetComponent<Animator>();
 
         dashesLeft = maxDashes;
 
@@ -105,7 +110,6 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext value)
     {
         currentMoveInputX = value.ReadValue<Vector2>().x;
-
         if (!isDashing)
         {
             float x = Mathf.Round(currentMoveInputX) * moveSpeed;
@@ -116,6 +120,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext value)
     {
+        if (value.started) anim.SetTrigger("Jump");
         if (value.performed && grounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
@@ -126,6 +131,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
+            anim.SetTrigger("Dashing");
             dashInput = true;
             dashInputStop = false;
         }
