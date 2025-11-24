@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class HorizontalMovingPlatform : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 3;
-    float maxHorizontalDistance = 5;
+    [SerializeField] float speed = 3;
+    [SerializeField] float maxHorizontalDistance = 5;
+    [SerializeField] int direction = -1; // set to -1 to move left to right instead of right to left 
     Vector2 originalPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +18,7 @@ public class HorizontalMovingPlatform : MonoBehaviour
         if (maxHorizontalDistance > 0)
         {
             var newX = Mathf.PingPong(Time.fixedTime * speed, maxHorizontalDistance);
-            this.transform.position = originalPos + new Vector2(newX, 0);
+            this.transform.position = originalPos + new Vector2(newX * direction, 0);
         }
     }
 
