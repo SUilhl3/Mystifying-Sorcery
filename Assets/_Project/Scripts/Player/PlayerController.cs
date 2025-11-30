@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public bool underCeiling;
     public int FacingDirection = 1;
 
+    public int keys = 0;
+
     // Dash variables
     private bool canDash = true;
     private bool isDashing;
@@ -70,12 +72,27 @@ public class PlayerController : MonoBehaviour
     #endregion
 
 
+    public void addKey(int amount)
+    {
+        keys += amount;
+    }
+    public void loseKey(int amount)
+    {
+        keys -= amount;
+    }
+
     #region Checks
     public bool CheckForCeiling() {return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);}
 
     public bool CheckIfGrounded() { return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround); }
 
     public void CheckIfShouldFlip(int xInput) {if (xInput != 0 && xInput != FacingDirection){ Flip(); }}
+
+    public bool hasKey()
+    {
+        if(keys > 0) { return true; }
+        return false;
+    }
     #endregion
 
 
