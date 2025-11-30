@@ -3,7 +3,6 @@ using UnityEngine;
 public class ProjectileBlock : MonoBehaviour
 {
     [SerializeField] float detectionRange = 5f;
-    [SerializeField] float fallSpeed;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] bool shootingLeft;
     [SerializeField] GameObject projectile;
@@ -25,6 +24,7 @@ public class ProjectileBlock : MonoBehaviour
         } else
         {
             detectionDirection = Vector2.right;
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 
