@@ -35,4 +35,5 @@ public class PlayerData : ScriptableObject
 
     [Header("Player Health")]
     public int maxHealth = 8;
+    public int currentHealth = 8;
 }

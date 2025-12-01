@@ -8,6 +8,7 @@ public class FallingBlock : MonoBehaviour
     [SerializeField] float fallSpeed;
     [SerializeField] LayerMask playerLayer;
     private bool isFalling = false;
+    public int damage = 10;
     Rigidbody2D rb;
 
     private void Start()
@@ -37,5 +38,13 @@ public class FallingBlock : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.gravityScale = fallSpeed;
     }
- 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            PlayerController pc = collision.collider.GetComponent<PlayerController>();
+            pc.TakeDamage(damage);
+        }
+    }
 }

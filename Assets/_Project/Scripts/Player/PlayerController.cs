@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -110,12 +111,24 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
         anim = GetComponent<Animator>();
+        playerData.currentHealth = playerData.maxHealth; //have to reset health otherwise if player gets hit, currentHealth is permanently lowered
 
         dashesLeft = maxDashes;
 
         if (DashDirectionIndicator != null)
         {
             DashDirectionIndicator.gameObject.SetActive(false);
+        }
+    }
+
+    public void TakeDamage(int  damage)
+    {
+        playerData.currentHealth -= damage;
+
+        if (playerData.currentHealth <= 0)
+        {
+            Debug.Log("Player died");
+            SceneManager.LoadScene("GameOver");
         }
     }
     

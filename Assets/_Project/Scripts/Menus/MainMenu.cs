@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadSceneAsync("Main game");
         //DisableMenuButtons();
         Debug.Log("Game has started...");
+        SceneManager.LoadScene("Level 1");
     }
     public void OnContinueGameClicked()
     {

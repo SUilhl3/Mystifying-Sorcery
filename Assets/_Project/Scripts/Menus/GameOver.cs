@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameOver : MonoBehaviour
     {
         //SceneManager.LoadScene("Main Menu");
         Debug.Log("Entered main menu screen!");
+        SceneManager.LoadScene("Main Menu");
     }
     public void ExitGame()
     {
