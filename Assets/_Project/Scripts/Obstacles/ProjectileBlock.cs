@@ -9,7 +9,7 @@ public class ProjectileBlock : MonoBehaviour
     [SerializeField] Vector3 offset;
     [SerializeField] float countingTime = 0;
     [SerializeField] float delayTime = 3f;
-    private Vector2 detectionDirection;
+    [SerializeField] private Vector2 detectionDirection;
     Rigidbody2D rb;
 
     private void Start()
