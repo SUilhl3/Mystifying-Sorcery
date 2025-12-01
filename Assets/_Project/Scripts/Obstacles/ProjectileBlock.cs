@@ -24,7 +24,7 @@ public class ProjectileBlock : MonoBehaviour
         } else
         {
             detectionDirection = Vector2.right;
-            transform.Rotate(0f, 180f, 0f);
+            //transform.Rotate(0f, 180f, 0f);
         }
     }
 
