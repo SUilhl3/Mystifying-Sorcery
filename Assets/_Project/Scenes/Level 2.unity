@@ -6750,6 +6750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76450e74e61524b90a1e27a56253aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1019667842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5337983094849051704, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+  m_PrefabInstance: {fileID: 1291788230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029535463
 GameObject:
   m_ObjectHideFlags: 0
@@ -7803,6 +7808,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1333520966}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337983094849051704, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337983094849051704, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1019667842}
     - target: {fileID: 6861902423466464843, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7890,6 +7919,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.9670916, y: 0.13656455}
   m_EdgeRadius: 0
+--- !u!114 &1333520966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+  m_PrefabInstance: {fileID: 1291788230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7cf9b72c140a2429066e7123afd230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1345412429
 PrefabInstance:
   m_ObjectHideFlags: 0
