@@ -5,9 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void OnNewGameClicked()
     {
-        //DataPersistenceManager.Instance.NewGame();
-        //SceneManager.LoadSceneAsync("Main game");
-        //DisableMenuButtons();
+        
         Debug.Log("Game has started...");
         SceneManager.LoadScene("Level 1");
     }
