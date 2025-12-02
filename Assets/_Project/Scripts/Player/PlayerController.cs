@@ -41,6 +41,14 @@ public class PlayerController : MonoBehaviour
     private Vector2 RawDashDirectionInput;
 
     private float currentMoveInputX;
+
+    [Header("Combat Settings")]
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private int attackDamage = 10;
+    [SerializeField] private float attackRate = 2f;
+    private float nextAttackTime = 0f;
     #endregion
 
 
@@ -131,7 +139,13 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
     }
-    
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
     #endregion
 
 
@@ -178,8 +192,44 @@ public class PlayerController : MonoBehaviour
 
         dashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
     }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            HandleAttack();
+        }
+    }
     #endregion
 
+    #region Combat Logic
+    private void HandleAttack()
+    {
+        // Can't attack if dashing or if on cooldown
+        if (isDashing || Time.time < nextAttackTime) return;
+
+        // Play animation
+        if (anim != null) anim.SetTrigger("Attack");
+
+        // Set cooldown
+        nextAttackTime = Time.time + (1f / attackRate);
+
+        // Detect enemies
+        if (attackPoint != null)
+        {
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("Hit enemy: " + enemy.name);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Attack Point is not assigned in the Inspector!");
+        }
+    }
+    #endregion
 
 
     #region Dash Logic

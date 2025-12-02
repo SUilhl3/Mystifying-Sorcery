@@ -651,13 +651,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1117539684}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513665068339810686, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1093477551}
     - target: {fileID: 6861902423466464843, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 805606172898199940, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1093477551}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
 --- !u!1001 &222185637
@@ -20231,11 +20266,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4446266598201974, guid: d10cbe6b249ddc34db2eae14d2ae9f3d, type: 3}
   m_PrefabInstance: {fileID: 1003682158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1093477550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093477551}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1093477551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093477550}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75, y: -0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1117539683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1117539683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 805606172898199940, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
   m_PrefabInstance: {fileID: 219836316}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117539684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
+  m_PrefabInstance: {fileID: 219836316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7cf9b72c140a2429066e7123afd230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1175491072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 556999158320564942, guid: e63a54ee05c52cd4a8c30be8d132455c, type: 3}
