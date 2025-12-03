@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7cf9b72c140a2429066e7123afd230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   jumpSpeed: 30
   playerData: {fileID: 11400000, guid: 02f98a1f1032ffb449276663957c6ccc, type: 2}
   rb: {fileID: 0}
@@ -505,8 +505,16 @@ MonoBehaviour:
   grounded: 0
   underCeiling: 0
   FacingDirection: 1
+  keys: 0
   maxDashes: 1
   dashesLeft: 0
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDamage: 10
+  attackRate: 2
 --- !u!1 &9208219602338841235
 GameObject:
   m_ObjectHideFlags: 0
