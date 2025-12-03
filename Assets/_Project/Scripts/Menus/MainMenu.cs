@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnContinueGameClicked()
     {
-        //SceneManager.LoadSceneAsync(SceneManagement.GetInstance().sceneToLoad);
+        SceneManager.LoadSceneAsync(SceneStateManager.instance.LastSceneName);
         Debug.Log("Game loaded the last known level saved...");
     }
 

@@ -18996,7 +18996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraDistance: 10
+  CameraDistance: 8
   DeadZoneDepth: 0
   Composition:
     ScreenPosition: {x: 0, y: 0}
@@ -19009,7 +19009,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -19067,7 +19067,7 @@ Transform:
   m_GameObject: {fileID: 385602149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.223489, y: -1.9542146, z: -10}
+  m_LocalPosition: {x: -8.223489, y: -1.9542146, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20074,7 +20074,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: delayTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: detectionRange
@@ -20139,11 +20139,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: delayTime
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
+      propertyPath: shootingLeft
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: detectionRange
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
+      propertyPath: detectionDirection.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7611543061453684578, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20494,7 +20502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5858639495618717323, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: jumpForce
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21370,7 +21378,7 @@ Transform:
   m_GameObject: {fileID: 1402236891}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.223489, y: -1.9542146, z: -10}
+  m_LocalPosition: {x: -8.223489, y: -1.9542146, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21971,7 +21979,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: delayTime
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: shootingLeft
@@ -22114,7 +22122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: delayTime
-      value: 2
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3730634375068166919, guid: 5954d7b298e5a7e40a013eac18e69d2b, type: 3}
       propertyPath: detectionRange
@@ -22717,7 +22725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713717484369028, guid: 5808ca7cfa9bad240b1c2c52003f4817, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.61
+      value: -21.1
       objectReference: {fileID: 0}
     - target: {fileID: 4713717484369028, guid: 5808ca7cfa9bad240b1c2c52003f4817, type: 3}
       propertyPath: m_LocalPosition.y
