@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
     [SerializeField] private LayerMask enemyLayers;
-    [SerializeField] private int attackDamage = 10;
+    //[SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackRate = 2f;
     private float nextAttackTime = 0f;
     #endregion
