@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform ceilingCheck;
     [SerializeField] private Transform DashDirectionIndicator;
     [SerializeField] private Animator anim;
+    [SerializeField] private Healthbar healthBar;
+    [SerializeField] private TMP_Text keyCounter;
 
     [Header("State")]
     public bool grounded;
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
 
 
     #region runtime functions
+
     void Start()
     {
         InitValues();
@@ -84,6 +87,7 @@ public class PlayerController : MonoBehaviour
     public void addKey(int amount)
     {
         keys += amount;
+        keyCounter.text = keys.ToString();
     }
     public void loseKey(int amount)
     {
@@ -120,6 +124,9 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         anim = GetComponent<Animator>();
         playerData.currentHealth = playerData.maxHealth; //have to reset health otherwise if player gets hit, currentHealth is permanently lowered
+        healthBar = FindAnyObjectByType<Healthbar>();
+        healthBar.healthSlider.maxValue = playerData.maxHealth;
+        healthBar.healthSlider.value = playerData.currentHealth;
 
         dashesLeft = maxDashes;
 
@@ -132,6 +139,8 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int  damage)
     {
         playerData.currentHealth -= damage;
+
+        healthBar.healthSlider.value = playerData.currentHealth;
 
         if (playerData.currentHealth <= 0)
         {
