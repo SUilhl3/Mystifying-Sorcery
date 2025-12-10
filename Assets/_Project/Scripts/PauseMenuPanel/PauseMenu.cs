@@ -48,6 +48,13 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Load the current scene by its index
     }
 
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quitting Game...");
