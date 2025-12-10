@@ -2,11 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class SettingManager : MonoBehaviour
+public class SettingsManager : MonoBehaviour
 {
-    public GameObject settingPanel;
-    [SerializeField] Slider volumeSlider;
-    public AudioSource volumeSource;
+    public GameObject settingsPanel;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,19 +17,18 @@ public class SettingManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            settingPanel.SetActive(false);
+            settingsPanel.SetActive(false);
             Debug.Log("ESC Key Pressed!");
         }
     }
 
     public void SettingPanel()
     {
-        settingPanel.SetActive(true);
-        Time.timeScale = 1f;
+        settingsPanel.SetActive(true);
     }
 
-    public void ChangeVolume()
+    public void Close()
     {
-        volumeSource.volume = volumeSlider.value;
+        settingsPanel.SetActive(false);
     }
 }
