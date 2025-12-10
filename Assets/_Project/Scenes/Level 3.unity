@@ -19430,7 +19430,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281179005340701092, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.500214
+      value: 11.97
       objectReference: {fileID: 0}
     - target: {fileID: 281179005340701092, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19487,8 +19487,8 @@ GameObject:
   m_Component:
   - component: {fileID: 326397763}
   - component: {fileID: 326397764}
-  - component: {fileID: 326397765}
   - component: {fileID: 326397766}
+  - component: {fileID: 326397767}
   m_Layer: 0
   m_Name: Book 1 - OP
   m_TagString: Untagged
@@ -19566,18 +19566,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &326397765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326397762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e76450e74e61524b90a1e27a56253aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &326397766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19624,6 +19612,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4, y: 1.12}
   m_EdgeRadius: 0
+--- !u!114 &326397767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326397762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e76450e74e61524b90a1e27a56253aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &340714320
 GameObject:
   m_ObjectHideFlags: 0
@@ -21281,7 +21281,7 @@ PrefabInstance:
     - target: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
       propertyPath: keyCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1936153091}
     - target: {fileID: 5917784951285045957, guid: 0c220c15a9cb0c14590b9da39ee8460c, type: 3}
       propertyPath: attackPoint
       value: 
@@ -21427,7 +21427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5858639495618717323, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: jumpForce
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22887,7 +22887,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281179005340701092, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.94
+      value: 15.64
       objectReference: {fileID: 0}
     - target: {fileID: 281179005340701092, guid: 9fb25009e828c2e41ae31a2349bf3d71, type: 3}
       propertyPath: m_LocalPosition.y
